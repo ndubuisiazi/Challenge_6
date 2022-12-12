@@ -1,0 +1,13 @@
+body{
+    background-color: #d2e2f9;
+    font-family: 'Montserrat', sans-serif;}
+
+#container{
+    grid-template-rows: .2fr 1fr .7fr;
+    
+}
+
+#current{
+    grid-template-columns: .2fr 1fr;
+    width: 100%;
+}
