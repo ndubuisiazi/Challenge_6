@@ -24,27 +24,26 @@ sh4.textContent = searchHistory[4];
 
 
 
-async function getData(){
+function getData(){
     city_name=document.getElementById("searchbx").value
     recentSearch.push(city_name)
     localStorage.setItem("City",JSON.stringify(recentSearch) )
   
     
     
-    // datapull = await fetch( HTTPS, 'http://api.openweathermap.org/geo/1.0/direct?q='+city_name+','+state+','+contry_code+'&limit='+10+'&appid='+api_key+'');
-    // dataP = await datapull.json();
+    datapull = 'http://api.openweathermap.org/geo/1.0/direct?q='+city_name+','+state+','+contry_code+'&limit='+10+'&appid='+api_key+'';
+    dataP = datapull;
+    console.log(dataP)
     // lat1 = dataP[0].lat;
     // lon1 = dataP[0].lon;
+    
 
-    // fullData = await fetch( HTTPS,'https://api.openweathermap.org/data/2.5/forecast/daily?lat='+lat1+'&lon='+lon1+'&appid='+api_key+'&units=imperial')
-    // weatherData = await fullData.json()
+    // fullData = 'https://api.openweathermap.org/data/2.5/forecast/daily?lat='+lat1+'&lon='+lon1+'&appid='+api_key+'&units=imperial'
+    // weatherData = fullData
     // console.log(weatherData)
 
 
-  var weatherData = 'https://api.openweathermap.org/data/2.5/forecast/daily?lat='+lat1+'&lon='+lon1+'&appid='+api_key+'&units=imperial';
 
-  console.log(weatherData)
-  location.assign(weatherData);
   
 
 
