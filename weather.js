@@ -31,16 +31,16 @@ function getData(){
   
     
     
-    datapull = 'http://api.openweathermap.org/geo/1.0/direct?q='+city_name+','+state+','+contry_code+'&limit='+10+'&appid='+api_key+'';
+    datapull = 'https://api.openweathermap.org/geo/1.0/direct?q='+city_name+','+state+','+contry_code+'&limit='+10+'&appid='+api_key+'';
     dataP = datapull;
     console.log(dataP)
-    // lat1 = dataP[0].lat;
-    // lon1 = dataP[0].lon;
+    lat1 = dataP[0].lat;
+    lon1 = dataP[0].lon;
     
 
-    // fullData = 'https://api.openweathermap.org/data/2.5/forecast/daily?lat='+lat1+'&lon='+lon1+'&appid='+api_key+'&units=imperial'
-    // weatherData = fullData
-    // console.log(weatherData)
+    fullData = 'https://api.openweathermap.org/data/2.5/forecast/daily?lat='+lat1+'&lon='+lon1+'&appid='+api_key+'&units=imperial'
+    weatherData = fullData
+    console.log(weatherData)
 
 
 
