@@ -41,6 +41,12 @@ async function getData(){
     console.log(weatherData)
 
 
+  var queryString = 'https://api.openweathermap.org/data/2.5/forecast/daily?lat='+lat1+'&lon='+lon1+'&appid='+api_key+'&units=imperial';
+
+  location.assign(queryString);
+  console.log(queryString)
+
+
   $(".current").append(
     `
     <div  id="recent" class="col-start-1">
