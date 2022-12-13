@@ -31,20 +31,21 @@ async function getData(){
   
     
     
-    datapull = await fetch( HTTPS, 'http://api.openweathermap.org/geo/1.0/direct?q='+city_name+','+state+','+contry_code+'&limit='+10+'&appid='+api_key+'');
-    dataP = await datapull.json();
-    lat1 = dataP[0].lat;
-    lon1 = dataP[0].lon;
+    // datapull = await fetch( HTTPS, 'http://api.openweathermap.org/geo/1.0/direct?q='+city_name+','+state+','+contry_code+'&limit='+10+'&appid='+api_key+'');
+    // dataP = await datapull.json();
+    // lat1 = dataP[0].lat;
+    // lon1 = dataP[0].lon;
 
-    fullData = await fetch( HTTPS,'https://api.openweathermap.org/data/2.5/forecast/daily?lat='+lat1+'&lon='+lon1+'&appid='+api_key+'&units=imperial')
-    weatherData = await fullData.json()
-    console.log(weatherData)
+    // fullData = await fetch( HTTPS,'https://api.openweathermap.org/data/2.5/forecast/daily?lat='+lat1+'&lon='+lon1+'&appid='+api_key+'&units=imperial')
+    // weatherData = await fullData.json()
+    // console.log(weatherData)
 
 
-  var queryString = 'https://api.openweathermap.org/data/2.5/forecast/daily?lat='+lat1+'&lon='+lon1+'&appid='+api_key+'&units=imperial';
+  var weatherData = 'https://api.openweathermap.org/data/2.5/forecast/daily?lat='+lat1+'&lon='+lon1+'&appid='+api_key+'&units=imperial';
 
-  location.assign(queryString);
-  console.log(queryString)
+  console.log(weatherData)
+  location.assign(weatherData);
+  
 
 
   $(".current").append(
