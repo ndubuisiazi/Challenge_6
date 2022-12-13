@@ -31,7 +31,7 @@ async function getData(){
   
     
     
-    datapull = await fetch('http://api.openweathermap.org/geo/1.0/direct?q='+city_name+','+state+','+contry_code+'&limit='+10+'&appid='+api_key+'');
+    datapull = await fetch( HTTPS, {'http://api.openweathermap.org/geo/1.0/direct?q='+city_name+','+state+','+contry_code+'&limit='+10+'&appid='+api_key+''});
     dataP = await datapull.json();
     lat1 = dataP[0].lat;
     lon1 = dataP[0].lon;
